@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube™ Dark-Light Theme Switcher",
+    "version": "1.02",
+    "description": "Enhance your YouTube™ experience with a modern, well-implemented switch button added directly to the YouTube menu.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon.png"
+        },
+        "default_title": "Click to set YouTube theme"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],    
+    "host_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icon.png",
+                "icon2.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "extension_ids": [
+                "*"
+            ]
+        }
+    ]
+}
