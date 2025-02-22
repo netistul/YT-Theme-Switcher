@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "YouTube™ Dark-Light Theme Switcher",
-    "version": "1.02",
-    "description": "Enhance your YouTube™ experience with a modern, well-implemented switch button added directly to the YouTube menu.",
+    "name": "YouTube Dark-Light Theme Switcher",
+    "version": "1.03",
+    "description": "Enhance your YouTube experience with a modern, well-implemented switch button added directly to the YouTube menu.",
     "background": {
         "service_worker": "background.js"
     },
